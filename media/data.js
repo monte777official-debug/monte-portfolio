@@ -79,6 +79,17 @@ window.SITE_ITEMS = [
     date: "2026-08-06",
   },
   {
+    id: "grassfield-selfie",
+    type: "image",
+    category: "일상",
+    tags: ["데일리", "셀카"],
+    title: "잔디밭에서",
+    desc: "화창한 날 야외 잔디밭에서 찍은 캐주얼 셀카 컷.",
+    tool: "",
+    file: "media/images/grassfield-selfie.jpg",
+    date: "2026-08-06",
+  },
+  {
     id: "pasta-daily",
     type: "video",
     category: "일상",
