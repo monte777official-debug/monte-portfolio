@@ -1,0 +1,409 @@
+:root {
+  --header-bg: #fbdfd0;
+  --promo-bg: #fdf0dd;
+  --pill-bg: #fbe3da;
+  --pill-bg-active: #5a2f22;
+  --pill-text: #5a2f22;
+  --pill-text-active: #ffffff;
+  --page-bg: #ffffff;
+  --card-radius: 16px;
+  --ink: #402a22;
+  --ink-soft: #8a6a5c;
+  --modal-bg: #fdf0dd;
+  --modal-panel: #fbe3da;
+  --accent: #f2a488;
+  --max-width: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  background: var(--page-bg);
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--header-bg);
+  padding: 28px 24px 34px;
+  text-align: center;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.brand-logo.has-image {
+  background: transparent;
+  border-radius: 0;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+/* ---------- Promo / control bar ---------- */
+.control-section {
+  background: var(--promo-bg);
+  padding: 26px 24px 22px;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 17px;
+  color: var(--ink);
+  max-width: 720px;
+  margin: 0 auto 22px;
+}
+
+.controls-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.type-sort-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-tabs {
+  display: inline-flex;
+  background: #ffffffaa;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+}
+
+.type-tab {
+  border: none;
+  background: transparent;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.type-tab.active {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.sort-select {
+  border: none;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pill {
+  border: none;
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+}
+
+.pill.active {
+  background: var(--pill-bg-active);
+  color: var(--pill-text-active);
+}
+
+/* ---------- Gallery ---------- */
+.gallery-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.gallery {
+  column-count: 5;
+  column-gap: 14px;
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    column-count: 4;
+  }
+}
+@media (max-width: 900px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+@media (max-width: 640px) {
+  .gallery {
+    column-count: 2;
+  }
+  .brand-name {
+    font-size: 24px;
+  }
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: #f2f2f2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card img,
+.card video {
+  width: 100%;
+  display: block;
+}
+
+.card .card-media {
+  position: relative;
+}
+
+.card .play-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  backdrop-filter: blur(2px);
+}
+
+.card .card-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 22px 12px 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card:hover .card-caption {
+  opacity: 1;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 12, 0.55);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--modal-bg);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 620px;
+  padding: 18px 18px 22px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-media {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.modal-media img,
+.modal-media video {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.modal-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.modal-meta-row .tag-badge {
+  background: #f4c9d8;
+  color: #7a2c45;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.modal-desc-box {
+  background: var(--modal-panel);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modal-actions a,
+.modal-actions button {
+  flex: 1;
+  text-align: center;
+  padding: 11px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px 40px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  border-top: 1px solid #eee;
+}

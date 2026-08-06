@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand-row">
+      <div class="brand-logo" id="brandLogo">M</div>
+      <h1 class="brand-name" id="brandName">PORTFOLIO</h1>
+    </div>
+  </header>
+
+  <section class="control-section">
+    <p class="tagline" id="tagline"></p>
+    <div class="controls-inner">
+      <div class="type-sort-row">
+        <div class="type-tabs">
+          <button class="type-tab active" data-type="all">전체</button>
+          <button class="type-tab" data-type="image">Images</button>
+          <button class="type-tab" data-type="video">Videos</button>
+        </div>
+        <select class="sort-select" id="sortSelect">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+      <div class="category-pills" id="categoryPills"></div>
+    </div>
+  </section>
+
+  <main class="gallery-wrap">
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <footer class="site-footer" id="footerText"></footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modalCloseBtn">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="media/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
