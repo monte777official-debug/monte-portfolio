@@ -163,4 +163,18 @@ window.SITE_ITEMS = [
     thumb: "media/thumbs/dance-freestyle.jpg",
     date: "2026-07-16",
   },
+
+  // ---------- 광고 ----------
+  {
+    id: "candle-ad",
+    type: "video",
+    category: "광고",
+    tags: ["광고영상", "제품컷"],
+    title: "코지 캔들 광고 — 인물 없는 제품 컷",
+    desc: "아로마 캔들 제품 광고 숏폼. 2026년 해외 트렌드(세로형, 매크로 클로즈업, ASMR 텍스처)를 참고해 MONTE만의 피치 코랄 톤으로 제작.",
+    tool: "Seedance 2.0",
+    file: "media/videos/candle-ad.mp4",
+    thumb: "media/thumbs/candle-ad.jpg",
+    date: "2026-08-06",
+  },
 ];
