@@ -86,7 +86,7 @@
     return `
       <div class="card" data-id="${item.id}">
         <div class="card-media">
-          <img src="${item.file && item.type === 'image' ? item.file : posterSrc}" loading="lazy" alt="${escapeHtml(item.title)}" />
+          <img src="${item.file && item.type === 'image' ? item.file : posterSrc}" loading="lazy" alt="${escapeHtml(item.title)}" draggable="false" oncontextmenu="return false" />
           ${playBadge}
           <div class="card-caption">${escapeHtml(item.title)}</div>
         </div>
@@ -113,8 +113,8 @@
 
     const mediaHtml =
       item.type === "video"
-        ? `<video src="${item.file}" controls autoplay playsinline poster="${item.thumb || ""}"></video>`
-        : `<img src="${item.file}" alt="${escapeHtml(item.title)}" />`;
+        ? `<video src="${item.file}" controls autoplay playsinline poster="${item.thumb || ""}" controlsList="nodownload noremoteplayback" disablePictureInPicture oncontextmenu="return false"></video>`
+        : `<img src="${item.file}" alt="${escapeHtml(item.title)}" draggable="false" oncontextmenu="return false" />`;
 
     modalBody.innerHTML = `
       <div class="modal-media">${mediaHtml}</div>
@@ -127,8 +127,7 @@
       <h2 class="modal-title">${escapeHtml(item.title)}</h2>
       <div class="modal-desc-box">${escapeHtml(item.desc || "")}</div>
       <div class="modal-actions">
-        <a class="btn-primary" href="${item.file}" download>다운로드</a>
-        <button class="btn-secondary" id="modalCloseBtn2">닫기</button>
+        <button class="btn-secondary" id="modalCloseBtn2" style="flex:1">닫기</button>
       </div>
     `;
     modalOverlay.classList.add("open");
@@ -161,6 +160,14 @@
   sortSelect.addEventListener("change", () => {
     state.sort = sortSelect.value;
     render();
+  });
+
+  // ---- basic download deterrents (not foolproof, but blocks casual save/drag) ----
+  document.addEventListener("contextmenu", (e) => {
+    if (e.target.closest(".card-media, .modal-media")) e.preventDefault();
+  });
+  document.addEventListener("dragstart", (e) => {
+    if (e.target.tagName === "IMG" || e.target.tagName === "VIDEO") e.preventDefault();
   });
 
   render();

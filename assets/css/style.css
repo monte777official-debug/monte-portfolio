@@ -42,6 +42,25 @@ video {
   max-width: 100%;
 }
 
+/* ---------- Download deterrents (best-effort, not foolproof) ---------- */
+.card-media img,
+.card-media video,
+.modal-media img,
+.modal-media video {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+}
+
+.card-media video::-webkit-media-controls-download-button,
+.modal-media video::-webkit-media-controls-download-button {
+  display: none !important;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   background: var(--header-bg);
