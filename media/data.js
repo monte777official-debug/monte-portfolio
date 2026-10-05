@@ -13,14 +13,40 @@
  */
 
 window.SITE_CONFIG = {
-  brand: "MONTE",
-  logoGlyph: "M",              // logoImage가 없을 때만 사용되는 대체 글자
+  brand: "이현우",
+  logoGlyph: "H",              // logoImage가 없을 때만 사용되는 대체 글자
   logoImage: "media/images/logo-pig.png",  // 로고 이미지 (지우면 다시 글자 로고로 돌아감)
   tagline: "내가 직접 만든 이미지와 숏폼 영상을 모아두는 공간",
   footerText: "© 2026 MONTE Portfolio. Made with AI tools.",
 };
 
 window.SITE_ITEMS = [
+
+  // ---------- 공포 ----------
+  {
+    id: "alley-creature",
+    type: "video",
+    category: "공포",
+    tags: ["공포", "골목", "크리처"],
+    title: "골목",
+    desc: "밤골목에서 실루엣 인물이 거미형 크리처로 변이하는 공포 숏폼.",
+    tool: "",
+    file: "media/videos/alley-creature.mp4",
+    thumb: "media/thumbs/alley-creature.jpg",
+    date: "2026-10-06",
+  },
+  {
+    id: "afterschool-guest",
+    type: "video",
+    category: "공포",
+    tags: ["공포", "교실", "숏폼"],
+    title: "교실",
+    desc: "방과 후 교실 일상에서 복도 괴물로 급전하는 학교 공포 숏폼.",
+    tool: "",
+    file: "media/videos/afterschool-guest.mp4",
+    thumb: "media/thumbs/afterschool-guest.jpg",
+    date: "2026-10-06",
+  },
   // ---------- 게임에셋: Cozy Healing Icons ----------
   {
     id: "heal-cover-main",
@@ -79,14 +105,25 @@ window.SITE_ITEMS = [
     date: "2026-08-06",
   },
   {
-    id: "grassfield-selfie",
+    id: "after-workout",
     type: "image",
     category: "일상",
     tags: ["데일리", "셀카"],
-    title: "잔디밭에서",
-    desc: "화창한 날 야외 잔디밭에서 찍은 캐주얼 셀카 컷.",
+    title: "운동후",
+    desc: "운동 후 찍은 캐주얼 셀카 컷.",
     tool: "",
-    file: "media/images/grassfield-selfie.jpg",
+    file: "media/images/운동후.jpg",
+    date: "2026-08-06",
+  },
+  {
+    id: "person-1",
+    type: "image",
+    category: "일상",
+    tags: ["데일리"],
+    title: "일상1",
+    desc: "도심에서 찍은 데일리 컷.",
+    tool: "",
+    file: "media/images/사람1.jpg",
     date: "2026-08-06",
   },
   {
