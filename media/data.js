@@ -237,6 +237,18 @@ window.SITE_ITEMS = [
 
   // ---------- 광고 ----------
   {
+    id: "newtape-ad",
+    type: "video",
+    category: "광고",
+    tags: ["광고영상", "브랜드협업", "비포애프터"],
+    title: "영포티에서 오지콤으로 — 뉴테입 모자 광고",
+    desc: "모자 하나로 분위기가 확 바뀌는 비포/애프터 숏폼. 뉴테입 지원용으로 기획부터 제작까지 혼자 진행.",
+    tool: "Grok, Newtake.ai",
+    file: "media/videos/영포티에서오지콤으로.mp4",
+    thumb: "media/thumbs/영포티에서오지콤으로.jpg",
+    date: "2026-10-28",
+  },
+  {
     id: "candle-ad",
     type: "video",
     category: "광고",
