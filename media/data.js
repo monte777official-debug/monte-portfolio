@@ -185,6 +185,18 @@ window.SITE_ITEMS = [
     thumb: "media/thumbs/어서오세요.jpg",
     date: "2026-08-06",
   },
+  {
+    id: "travel-end",
+    type: "video",
+    category: "캐릭터",
+    tags: ["AI캐릭터", "스튜디오"],
+    title: "여행 끝",
+    desc: "스튜디오 배경에서 백팩을 메고 여권을 확인하는 인물 숏폼.",
+    tool: "",
+    file: "media/videos/여행끝.mp4",
+    thumb: "media/thumbs/여행끝.jpg",
+    date: "2026-10-28",
+  },
 
   // ---------- 댄스숏츠 ----------
 
